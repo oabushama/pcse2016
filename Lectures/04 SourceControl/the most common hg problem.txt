@@ -1,0 +1,43 @@
+##
+## I have committed changes and try to push them to the repository
+##
+[03 MPI:80] hg push pcse2016
+pushing to https://VictorEijkhout:***@bitbucket.org/VictorEijkhout/pcse2016
+searching for changes
+remote has heads on branch 'default' that are not known locally: 70f6f2e903f2
+abort: push creates new remote head 0c029a7fddc2!
+(pull and merge or see "hg help push" for details about pushing new heads)
+##
+## Strange error!
+## but note the "pull and merge" hint on the last line...
+## Apparently the remote repository has changes that I need to pull
+##
+[03 MPI:81] hg pull -u 
+pulling from https://VictorEijkhout@bitbucket.org/VictorEijkhout/pcse2016
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 3 changesets with 3 changes to 3 files (+1 heads)
+not updating: not a linear update
+(merge or update --check to force update)
+##
+## Again note that last line: it tells me to merge
+##
+[03 MPI:82] hg merge
+2 files updated, 0 files merged, 0 files removed, 0 files unresolved
+(branch merge, don't forget to commit)
+##
+## Now it tells me don't forget to commit
+##
+[03 MPI:83] hg commit -m "merging"
+## 
+## ....and now finally I can push my changes
+##
+[03 MPI:84] hg push pcse2016
+pushing to https://VictorEijkhout:***@bitbucket.org/VictorEijkhout/pcse2016
+searching for changes
+remote: adding changesets
+remote: adding manifests
+remote: adding file changes
+remote: added 2 changesets with 1 changes to 1 files
